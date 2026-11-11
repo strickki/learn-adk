@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets: never commit real keys. Only the template is tracked.
+.env
+.env.*
+!.env.example
+*.db
+.adk/
