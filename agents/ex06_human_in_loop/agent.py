@@ -9,7 +9,7 @@ Concepts:
   hand so you can see the protocol.
 
 Run it:
-    uv run python agents/06_human_in_loop/agent.py
+    uv run python agents/ex06_human_in_loop/agent.py
     uv run adk web agents
 """
 

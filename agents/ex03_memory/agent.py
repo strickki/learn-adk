@@ -15,7 +15,7 @@ Concepts:
   missing" instead of an error.
 
 Run it:
-    uv run python agents/03_memory/agent.py
+    uv run python agents/ex03_memory/agent.py
     uv run adk web agents          # the State tab shows state changing
 """
 

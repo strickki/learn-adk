@@ -15,9 +15,9 @@ Models are called through [OpenRouter](https://openrouter.ai) using ADK's `LiteL
 ## Running
 
 ```bash
-uv run python agents/02_tools/agent.py   # run one example as a script
+uv run python agents/ex02_tools/agent.py   # run one example as a script
 uv run adk web agents                    # dev UI: chat, events, state, traces for every example
-uv run adk run agents/02_tools           # chat in the terminal
+uv run adk run agents/ex02_tools           # chat in the terminal
 uv run pytest                            # offline tests with a fake model (no API key needed)
 ```
 
@@ -25,7 +25,7 @@ uv run pytest                            # offline tests with a fake model (no A
 
 ## Examples
 
-Each `agents/NN_name/agent.py` has a header that explains its concepts, and ends with **Try next** exercises.
+Each `agents/exNN_name/agent.py` has a header that explains its concepts, and ends with **Try next** exercises.
 
 | # | Example | You learn |
 |---|---------|-----------|

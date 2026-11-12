@@ -9,7 +9,7 @@ Concepts:
   until the model produces a final answer (the "agent loop").
 
 Run it:
-    uv run python agents/02_tools/agent.py
+    uv run python agents/ex02_tools/agent.py
     uv run adk web agents          # the Events tab shows each tool call
 """
 

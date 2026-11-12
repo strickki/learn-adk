@@ -53,7 +53,7 @@ def test_adk_web_can_load(example):
 
 
 async def test_tools_example_calls_tools():
-    mod = load("02_tools")
+    mod = load("ex02_tools")
     mod.root_agent.model = ScriptedLlm(script=[
         {"name": "calculate_refund", "args": {"order_id": "A102"}},
         "Not eligible.",
@@ -64,7 +64,7 @@ async def test_tools_example_calls_tools():
 
 
 async def test_memory_example_user_state_crosses_sessions():
-    mod = load("03_memory")
+    mod = load("ex03_memory")
     mod.root_agent.model = ScriptedLlm(script=[
         {"name": "remember_customer", "args": {"name": "Kim", "favourite_order_id": "A100"}},
         "Nice to meet you, Kim.",
@@ -78,7 +78,7 @@ async def test_memory_example_user_state_crosses_sessions():
 
 @pytest.mark.parametrize("category,expected", [("billing", "BILLING"), ("technical", "TECH")])
 async def test_workflow_routes_by_category(category, expected):
-    mod = load("04_workflow")
+    mod = load("ex04_workflow")
     scripts = {
         "triage": [f'{{"category": "{category}", "urgency": "low", "summary": "x"}}'],
         "billing_agent": ["BILLING reply"],
@@ -93,7 +93,7 @@ async def test_workflow_routes_by_category(category, expected):
 
 
 async def test_multi_agent_transfers_to_specialist():
-    mod = load("05_multi_agent")
+    mod = load("ex05_multi_agent")
     mod.root_agent.model = ScriptedLlm(script=[
         {"name": "transfer_to_agent", "args": {"agent_name": "orders_agent"}},
     ])
@@ -104,7 +104,7 @@ async def test_multi_agent_transfers_to_specialist():
 
 @pytest.mark.parametrize("approve,refunded", [(True, True), (False, False)])
 async def test_refund_pauses_for_confirmation(approve, refunded, monkeypatch, capsys):
-    mod = load("06_human_in_loop")
+    mod = load("ex06_human_in_loop")
     mod.root_agent.model = ScriptedLlm(script=[
         {"name": "issue_refund", "args": {"order_id": "A100", "amount": 129.0}},
         "Done.",

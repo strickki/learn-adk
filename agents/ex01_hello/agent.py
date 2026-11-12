@@ -7,8 +7,8 @@ Concepts:
 - `root_agent`: the variable name `adk web` / `adk run` look for.
 
 Run it:
-    uv run python agents/01_hello/agent.py
-    uv run adk web agents          # then pick "01_hello" in the browser
+    uv run python agents/ex01_hello/agent.py
+    uv run adk web agents          # then pick "ex01_hello" in the browser
 """
 
 import asyncio
@@ -33,7 +33,7 @@ root_agent = LlmAgent(
 
 async def main() -> None:
     runner = InMemoryRunner(agent=root_agent)
-    # run_debug hides session plumbing; 03_memory shows what it does for you.
+    # run_debug hides session plumbing; ex03_memory shows what it does for you.
     await runner.run_debug("In one sentence, what makes something an 'AI agent'?")
 
 

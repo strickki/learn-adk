@@ -14,7 +14,7 @@ Concepts:
   coordinator calls it, gets an answer back, and stays in charge.
 
 Run it:
-    uv run python agents/05_multi_agent/agent.py
+    uv run python agents/ex05_multi_agent/agent.py
     uv run adk web agents          # watch the author of each event change
 """
 

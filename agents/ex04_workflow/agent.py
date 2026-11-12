@@ -19,7 +19,7 @@ Graph:
                                             \\-technical-> tech_agent (LLM)
 
 Run it:
-    uv run python agents/04_workflow/agent.py
+    uv run python agents/ex04_workflow/agent.py
     uv run adk web agents          # inspect events to see which path ran
 """
 
